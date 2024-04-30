@@ -1,0 +1,21 @@
+<aside [ngClass]="{ 'collapsed': isCollapsed }">
+  <button (click)="toggleCollapse()">
+    <i class="fas fa-bars"></i>
+    <span *ngIf="!isCollapsed">Toggle Collapse</span>
+  </button>
+
+  <ul>
+    <li>
+      <a (click)="toggleSubMenu('introduccion')">
+        Introducción
+        <i class="fas" [ngClass]="activeSubMenu === 'introduccion' ? 'fa-caret-up' : 'fa-caret-down'"></i>
+      </a>
+      <ul *ngIf="activeSubMenu === 'introduccion'">
+        <li><a href="/actividad1">Actividad 1</a></li>
+        <li><a href="/actividad2">Actividad 2</a></li>
+      </ul>
+    </li>    
+    <li><a href="/explicacion">Explicación</a></li>
+  </ul>
+</aside>
+

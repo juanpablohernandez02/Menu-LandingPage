@@ -1,0 +1,80 @@
+aside {
+  width: 200px;
+  height: 100%;
+  background-color: #f2f2f2;
+  color: black;
+  transition: width 0.3s;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden; /* Ocultar la barra de desplazamiento lateral */
+  z-index: 1000;
+}
+
+.collapsed {
+  width: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+a:hover {
+  background-color: #ddd;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+aside.collapsed > ul {
+  display: none;
+}
+
+aside:not(.collapsed) > ul {
+  display: block;
+}
+
+ul ul {
+  padding-left: 20px;
+}
+
+main {
+  padding-left: 200px;
+}
+
+i {
+  vertical-align: middle;
+  display: inline-block;
+}

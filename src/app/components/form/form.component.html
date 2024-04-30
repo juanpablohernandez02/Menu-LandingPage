@@ -1,0 +1,57 @@
+<div class="caja">
+  <h2 class="titulo">
+    <div>
+      <i class="fas fa-question-circle"></i>
+      <span class="titulo-texto">Ejercicio 2</span>
+    </div>
+    <i class="fas fa-minus-circle" (click)="toggleContent()"></i>
+  </h2>
+  <div class="contenido" [class.oculto]="contenidoOculto">
+    <form (ngSubmit)="comprobarRespuestas()">
+      <p>Seleccionar las respuestas correctas.</p>
+      <p>¿Cuál es la diferencia fundamental entre un argumento deductivo y un argumento inductivo?</p>
+      <label>
+        <input type="radio" name="respuesta1" value="a" (change)="checkRespuestas1()">
+        a. Los argumentos deductivos se basan en premisas que otorgan un grado de probabilidad a la conclusión, mientras que los argumentos inductivos garantizan la verdad de la conclusión.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta1" value="b" (change)="checkRespuestas1()">
+        b. Los argumentos deductivos son siempre inválidos, mientras que los argumentos inductivos son siempre fuertes.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta1" value="c" (change)="checkRespuestas1()">
+        c. La diferencia radica en que los argumentos deductivos no requieren premisas, mientras que los inductivos sí.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta1" value="d" (change)="checkRespuestas1()">
+        d. Los argumentos deductivos aseguran que la verdad de las premisas conduce necesariamente a la verdad de la conclusión, mientras que los argumentos inductivos otorgan un grado de probabilidad a la conclusión.
+      </label>
+      <br><br>
+      <p>¿Qué aspecto de los argumentos NO será evaluado en la prueba de comunicación escrita, según lo establecido en el texto?</p>
+      <label>
+        <input type="radio" name="respuesta2" value="a" (change)="checkRespuestas2()">
+        a. La corrección de su presentación formal.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta2" value="b" (change)="checkRespuestas2()">
+        b. La claridad de su expresión.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta2" value="c" (change)="checkRespuestas2()">
+        c. La validez de los argumentos.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="respuesta2" value="d" (change)="checkRespuestas2()">
+        d. La pertinencia de los argumentos para justificar el punto central del escrito.
+      </label>
+      <br><br>
+      <button type="submit" (click)="comprobarRespuestas()" [disabled]="!respuestasMarcadas">Comprobar</button>
+    </form>
+  </div>
+</div>

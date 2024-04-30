@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+app-side-bar-menu {
+  min-width: 50px;
+  flex: 0 0 auto;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+}
